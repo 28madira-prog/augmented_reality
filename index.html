@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>A-Frame Text Example</title>
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <!-- Basic Text -->
-      <a-text value="Hello, A-Frame!" position="-1 1 -3" color="white"></a-text>
+<head>
+<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+		<!-- include ar.js for a-frame -->
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body>
+		<a-scene embedded arjs>
+		<a-marker type="https://raw.githubusercontent.com/28madira/augmented_reality/main/pattern-26813_1_proof.patt">
+<a-text value="Welcome To The Expo!" position="-1 0.5 -3" color="white"></a-text>
 
-      <!-- Customized Text -->
-      <a-text
-        value="Welcome To The Expo!"
-        position="1 1 -3"
-        color="blue"
-        width="2"
-        align="center"
-        font="https://cdn.aframe.io/fonts/Aileron-Semibold.fnt"
-      ></a-text>
-
-      <!-- Text on a plane -->
-      <a-plane position="0 0 -5" rotation="-90 0 0" width="4" height="2" color="#CCC"></a-plane>
-      <a-text
-        value="Text on a Plane"
-        position="0 0.1 -5"
-        rotation="-90 0 0"
-        color="black"
-        width="3"
-        align="center"
-      ></a-text>
-
-      <a-entity camera look-controls></a-entity>
-    </a-scene>
-  </body>
+  <!-- Display multi-line, centered, blue text with a specific width -->
+  <a-text 
+    value="This is a longer message.\nIt has multiple lines." 
+    position="0 1 -4" 
+    color="blue" 
+    width="2" 
+    align="center">
+  </a-text>
+			<!-- define a camera which will move according to the marker position -->
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
 </html>
+
