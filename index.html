@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A-Frame Text Example</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Basic Text -->
+      <a-text value="Hello, A-Frame!" position="-1 1 -3" color="white"></a-text>
+
+      <!-- Customized Text -->
+      <a-text
+        value="Welcome To The Expo!"
+        position="1 1 -3"
+        color="blue"
+        width="2"
+        align="center"
+        font="https://cdn.aframe.io/fonts/Aileron-Semibold.fnt"
+      ></a-text>
+
+      <!-- Text on a plane -->
+      <a-plane position="0 0 -5" rotation="-90 0 0" width="4" height="2" color="#CCC"></a-plane>
+      <a-text
+        value="Text on a Plane"
+        position="0 0.1 -5"
+        rotation="-90 0 0"
+        color="black"
+        width="3"
+        align="center"
+      ></a-text>
+
+      <a-entity camera look-controls></a-entity>
+    </a-scene>
+  </body>
+</html>
